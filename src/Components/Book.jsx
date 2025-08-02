@@ -32,7 +32,7 @@ export default function Book() {
           </p>
           <div className="flex justify-center mt-8 md:justify-start md:mt-0">
             <a
-              href="https://your-google-form-link.com"
+              href="https://docs.google.com/forms/d/1ntJEL1aAyMR6GpLMKCa5ZB7tb8FTUGhWpAFI0kN0XRc/viewform?chromeless=1&edit_requested=true"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 text-lg font-semibold text-white transition duration-300 transform bg-orange-500 rounded-xl hover:bg-orange-600 hover:scale-105"

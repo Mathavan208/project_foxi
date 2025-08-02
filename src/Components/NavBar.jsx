@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, scale } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.jpg';
 
@@ -13,22 +13,7 @@ export default function NavBar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Book', 'Contact'];
-
-  // Word-level animation variant
-  const wordVariants = {
-    initial: { y: 0,scale: 1},
-    hover: {
-      y: -10,
-      scale:1.1,
-      transition: {
-        duration: 0.3,
-        ease: 'easeInOut',
-        repeat:Infinity,
-        delay:0.2
-      }
-    }
-  };
+  const navLinks = ['home', 'about', 'book', 'contact'];
 
   return (
     <motion.header
@@ -50,16 +35,13 @@ export default function NavBar() {
         {/* Desktop Nav */}
         <nav className="hidden space-x-8 md:flex">
           {navLinks.map((link) => (
-            <motion.a
+            <a
               key={link}
               href={'#' + link.toLowerCase()}
               className="text-lg font-semibold text-orange-500 cursor-pointer font-palanquin"
-              variants={wordVariants}
-              initial="initial"
-              whileHover="hover"
             >
               {link}
-            </motion.a>
+            </a>
           ))}
         </nav>
 
